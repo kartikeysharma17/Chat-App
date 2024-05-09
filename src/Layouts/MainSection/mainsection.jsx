@@ -15,7 +15,7 @@ const MainSection = () => {
       setIsMobile(width <= 768);
       setShowSidebar(false);
 
-      console.log("Window width:", width, "Is mobile:", width <= 768);
+      // console.log("Window width:", width, "Is mobile:", width <= 768);
     };
 
     window.addEventListener("resize", handleResize);
@@ -124,7 +124,7 @@ const MainSection = () => {
       const assistantReply = responseData?.choices?.[0]?.message;
 
       setChatHistory((prevChatHistory) => [...prevChatHistory, assistantReply]);
-      console.log("prevChatHistory", chatHistory);
+      // console.log("prevChatHistory", chatHistory);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -226,7 +226,7 @@ const MainSection = () => {
       </div>
       {!showSidebar && (
         <div style={{ overflow: "hidden", position: "fixed" }}>
-          {console.log("isMobile", isMobile)}
+         
           <div
             style={{
               position: "fixed",
