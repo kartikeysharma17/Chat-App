@@ -3,7 +3,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Sidebar from "../Sidebar/sidebar";
 
 const MainSection = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const [showSidebar, setShowSidebar] = useState();
   const [messageQueue] = useState([]);
   const [question, setQuestion] = useState("");
   const [isMobile, setIsMobile] = useState(false);
@@ -13,10 +13,13 @@ const MainSection = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width <= 768);
-      setShowSidebar(false);
+      const handleShowSidebar = width > 768 ? true : false;
+      console.log("handleShowSidebar",handleShowSidebar)
+      setShowSidebar(handleShowSidebar);
 
       // console.log("Window width:", width, "Is mobile:", width <= 768);
     };
+
 
     window.addEventListener("resize", handleResize);
 
