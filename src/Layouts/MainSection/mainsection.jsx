@@ -4,7 +4,7 @@ import Sidebar from "../Sidebar/sidebar";
 
 const MainSection = () => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const [messageQueue, setMessageQueue] = useState([]);
+  const [messageQueue] = useState([]);
   const [question, setQuestion] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const [chatHistory, setChatHistory] = useState([]);
